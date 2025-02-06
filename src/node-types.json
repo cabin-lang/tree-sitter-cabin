@@ -401,7 +401,7 @@
       },
       "value": {
         "multiple": false,
-        "required": true,
+        "required": false,
         "types": [
           {
             "type": "expression",
@@ -870,6 +870,10 @@
   },
   {
     "type": "default",
+    "named": false
+  },
+  {
+    "type": "done",
     "named": false
   },
   {
