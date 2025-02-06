@@ -55,6 +55,7 @@ module.exports = grammar({
 			$.either,
 			$.object_constructor,
 			$.extend,
+			$.choice,
 			$.identifier,
 		),
 
@@ -113,6 +114,15 @@ module.exports = grammar({
 			"}"
 		),
 
+		choice: $ => seq(
+			"choice",
+			optional(seq("<", field("compile_time_parameters", list($.group_parameter)), ">")),
+			"{",
+			field("choices", list($.choice_variant)),
+			"}"
+		),
+
+		choice_variant: $ => $.expression,
 		either_variant: $ => $.identifier,
 
 		function: $ => prec.left(seq(
