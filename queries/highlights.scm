@@ -54,6 +54,10 @@
 	value: (expression (literal (choice)))
 )
 (declaration
+	name: (identifier) @type
+	value: (expression (literal (extend)))
+)
+(declaration
 	name: (identifier) @function
 	value: (expression (literal (function)))
 )
