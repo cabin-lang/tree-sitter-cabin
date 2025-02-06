@@ -157,7 +157,10 @@ module.exports = grammar({
 		goto: $ => seq(
 			field("label", $.identifier),
 			"is",
-			field("value", $.expression),
+			choice(
+				"done",
+				field("value", $.expression),
+			),
 		),
 
 		// Tokens

@@ -6,10 +6,11 @@
 (object_constructor ["new"] @keyword)
 (extend ["extend" "tobe"] @keyword)
 (default_extend ["default"] @keyword)
-(goto ["is"] @keyword)
+(goto ["is" "done"] @keyword)
 (choice ["choice"] @keyword)
 
 ; Semantics
+(goto label: (identifier) @label)
 (group_parameter name: (identifier) @type)
 (group_parameter type: (expression (literal (identifier))) @type)
 (extend target: (expression (literal (identifier))) @type)
