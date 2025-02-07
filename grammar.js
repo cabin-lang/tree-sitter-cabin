@@ -29,7 +29,7 @@ module.exports = grammar({
 		function_call: $ => prec.left(5, choice(
 			seq(
 				field("callee", $.expression),
-				"<", field("compile_time_arguments", list($.expression)), ">",
+				"<", field("compile_time_arguments", list($.compile_time_argument)), ">",
 				optional(seq("(", field("arguments", list($.expression)), ")"))
 			),
 			seq(
@@ -128,7 +128,7 @@ module.exports = grammar({
 
 		function: $ => prec.left(seq(
 			"action",
-			optional(field("compile_time_parameters", seq("<", list($.parameter), ">"))),
+			optional(field("compile_time_parameters", seq("<", list($.group_parameter), ">"))),
 			optional(field("parameters", seq("(", list($.parameter), ")"))),
 			seq(":", field("return_type", $.expression)),
 			optional(field("body", $.block))
@@ -176,6 +176,8 @@ module.exports = grammar({
 			":",
 			field("type", $.expression),
 		),
+
+		compile_time_argument: $ => $.expression,
 
 		// Extra
 

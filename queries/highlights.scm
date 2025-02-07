@@ -10,6 +10,7 @@
 (choice ["choice"] @keyword)
 
 ; Semantics
+(compile_time_argument (expression (literal (identifier))) @type)
 (goto label: (identifier) @label)
 (group_parameter name: (identifier) @type)
 (group_parameter type: (expression (literal (identifier))) @type)
