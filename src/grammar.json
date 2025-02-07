@@ -114,7 +114,7 @@
                       "members": [
                         {
                           "type": "SYMBOL",
-                          "name": "expression"
+                          "name": "compile_time_argument"
                         },
                         {
                           "type": "REPEAT",
@@ -127,7 +127,7 @@
                               },
                               {
                                 "type": "SYMBOL",
-                                "name": "expression"
+                                "name": "compile_time_argument"
                               }
                             ]
                           }
@@ -1458,7 +1458,7 @@
                           "members": [
                             {
                               "type": "SYMBOL",
-                              "name": "parameter"
+                              "name": "group_parameter"
                             },
                             {
                               "type": "REPEAT",
@@ -1471,7 +1471,7 @@
                                   },
                                   {
                                     "type": "SYMBOL",
-                                    "name": "parameter"
+                                    "name": "group_parameter"
                                   }
                                 ]
                               }
@@ -1771,6 +1771,10 @@
           }
         }
       ]
+    },
+    "compile_time_argument": {
+      "type": "SYMBOL",
+      "name": "expression"
     },
     "comment": {
       "type": "SEQ",

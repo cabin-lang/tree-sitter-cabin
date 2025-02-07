@@ -109,6 +109,21 @@
     "fields": {}
   },
   {
+    "type": "compile_time_argument",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "expression",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "declaration",
     "named": true,
     "fields": {
@@ -302,7 +317,7 @@
             "named": false
           },
           {
-            "type": "parameter",
+            "type": "group_parameter",
             "named": true
           }
         ]
@@ -378,7 +393,7 @@
             "named": false
           },
           {
-            "type": "expression",
+            "type": "compile_time_argument",
             "named": true
           }
         ]
