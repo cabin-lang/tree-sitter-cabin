@@ -664,7 +664,7 @@
       "members": [
         {
           "type": "STRING",
-          "value": "extend"
+          "value": "extensionof"
         },
         {
           "type": "CHOICE",
@@ -1630,10 +1630,6 @@
             {
               "type": "SYMBOL",
               "name": "expression"
-            },
-            {
-              "type": "SYMBOL",
-              "name": "default_extend"
             }
           ]
         },
@@ -1685,19 +1681,6 @@
             "type": "SYMBOL",
             "name": "expression"
           }
-        }
-      ]
-    },
-    "default_extend": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "STRING",
-          "value": "default"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "extend"
         }
       ]
     },
@@ -1805,5 +1788,6 @@
   "precedences": [],
   "externals": [],
   "inline": [],
-  "supertypes": []
+  "supertypes": [],
+  "reserved": {}
 }

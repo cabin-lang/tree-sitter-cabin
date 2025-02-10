@@ -75,7 +75,7 @@ module.exports = grammar({
 		),
 
 		extend: $ => seq(
-			"extend",
+			"extensionof",
 			optional(seq("<", field("compile_time_parameters", list($.group_parameter)), ">")),
 			field("target", $.expression),
 			optional(seq("tobe", field("tobe", $.expression))),
@@ -138,7 +138,6 @@ module.exports = grammar({
 			$.declaration,
 			$.goto,
 			$.expression,
-			$.default_extend,
 		), ";"),
 
 		declaration: $ => seq(
@@ -147,11 +146,6 @@ module.exports = grammar({
 			field("name", $.identifier),
 			"=",
 			field("value", $.expression)
-		),
-
-		default_extend: $ => seq(
-			"default",
-			$.extend
 		),
 
 		goto: $ => seq(

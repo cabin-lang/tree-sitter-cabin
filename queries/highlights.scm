@@ -4,8 +4,7 @@
 (either ["either"] @keyword)
 (function ["action"] @keyword.function)
 (object_constructor ["new"] @keyword)
-(extend ["extend" "tobe"] @keyword)
-(default_extend ["default"] @keyword)
+(extend ["tobe" "extensionof"] @keyword)
 (goto ["is" "done"] @keyword)
 (choice ["choice"] @keyword)
 
